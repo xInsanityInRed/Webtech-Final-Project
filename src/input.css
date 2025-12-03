@@ -1,1 +1,10 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@layer theme {
+    :root, :host {
+        --color-soft-blush: #ffd7d5;
+        --color-petal-frost: #ffd3e8;
+        --color-banana-cream: #fdf3af;
+        --color-mauve-bark: #725752;
+    }
+}
