@@ -1,0 +1,19 @@
+### WebStorm force ignore the .idea folder and all its contents
+### Added by Gabrielle Allan 3/12/2025
+.idea
+.idea/
+.idea/*
+.idea/**
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+.venv
+.venv/
