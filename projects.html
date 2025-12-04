@@ -4,9 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/site.css" rel="stylesheet">
-    <title>Document</title>
+    <!-- Following script is for the dropdown menu in tailwindcss documentation: https://tailwindcss.com/plus/ui-blocks/application-ui/elements/dropdowns -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <title>Projects</title>
 </head>
-<body>
-    
+<body class="bg-(--color-petal-frost)">
+    <header class="sticky top-0 flex flex-col justify-between p-6 mx-auto md:flex-row gap-2 bg-(--color-mauve-bark) text-gray-200">
+        <a class="flex items-center mb-4 title-font md:mb-0 gap-2">
+            <img src="https://placehold.co/64?text=logo" alt="SCC Logo" class="h-6">
+            <h1 class="text-lg">Final Project Website</h1>
+        </a>
+        <div>
+            <nav class="pt-8">
+                <ul class="flex flex-row gap-4 w-full">
+                    <li class="border border-t-0 border-x-0 border-gray-600 hover:border-gray-300 hover:text-white transition duration-500 ease-in-out pb-2">
+                        <button>
+                            <a href="./index.html"><img src="/assets/img/home.png" alt="Home Icon" class="h-6"></a>
+                        </button>
+                    </li>
+                    <el-dropdown class="inline-block">
+                        <button class="pb-2">
+                            <img src="/assets/img/hamburger-icon.png" alt="Menu Icon" class="h-6">
+                        </button>
+                        <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                            <div class="py-1">
+                                <a href="./index.html" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Home</a>
+                                <a href="./about.html" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">About Me</a>
+                                <a href="./contact.html" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Contact Me</a>
+                                <a href="./projects.html" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Projects</a>
+                                <a href="./mywork.html" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Project Sample</a>
+                                <a href="./resume.html" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Resume</a>
+                            </div>
+                        </el-menu>
+                    </el-dropdown>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="w-4/5 bg-(--color-banana-cream) mx-auto">
+        <article class="flex flex-col gap-4 pb-8">
+            <header class="m-0 p-4">
+                <h2 class="text-2xl font-bold text-gray-500 mb-2">Projects</h2>
+                <p class="text-lg font-bold text-gray-700">Collection of projects completed on GitHub</p>
+            </header>
+            <div class="m-0 p-4">
+                <h3 class="text-xl font-bold text-gray-500 mb-2">Web References</h3>
+                <div class="grid grid-cols-6 gap-8 mx-4">
+                    <section class="col-span-3 bg-(--color-soft-blush) border border-gray-500 flex flex-col gap-4 p-4 my-4 shadow-lg"> <!-- Reference for margins and shadows: https://tailwindcss.com/docs/margin & https://tailwindcss.com/docs/box-shadow#basic-example -->
+                        <p class="flex justify-between">
+                            <a href="https://github.com/xInsanityInRed/All-In-One-Python-Projects/tree/travel-itinerary-planner">Itinerary Planner</a>
+                        </p>
+                    </section>
+                    <section class="col-span-3 bg-(--color-soft-blush) border border-gray-500 flex flex-col gap-4 p-4 my-4 shadow-lg">
+                        <p class="flex justify-between">
+                            <a href="https://github.com/xInsanityInRed/civ-ipriot-smiley">Smiley SenseHAT LED</a>
+                        </p>
+                    </section>
+                    <section class="col-span-3 bg-(--color-soft-blush) border border-gray-500 flex flex-col gap-4 p-4 my-4 shadow-lg">
+                        <p class="flex justify-between">
+                            <a href="https://github.com/xInsanityInRed/WebTech-Portfolio-Start">Web Technologies Portfolio</a>
+                        </p>
+                    </section>
+                    <section class="col-span-3 bg-(--color-soft-blush) border border-gray-500 flex flex-col gap-4 p-4 my-4 shadow-lg">
+                        <p class="flex justify-between">
+                            <a href="https://github.com/xInsanityInRed/skills-introduction-to-github">GitHub Introduction Activity</a>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="text-gray-200 bg-(--color-mauve-bark) body-font w-full container flex flex-col items-start justify-between p-6 mx-auto md:flex-row gap-2">
+        <section class="flex items-center mb-4 title-font md:mb-0 gap-2 hover:text-white transition duration-500 ease-in-out">
+            <img src="https://placehold.co/64?text=logo" alt="Logo" class="h-6">
+            <p class="m-auto flex flex-wrap text-sm pl-6 ml-6 text-base
+                    border-l border-gray-400 grow">© Copyright 2023 Adrian Gould and Gabrielle Allan. All rights reserved.</p>
+        </section>
+        <section>
+            <ul class="flex flex-wrap text-sm pl-6 ml-6 text-base
+                    border-l border-gray-400 md:mr-auto gap-4">
+                <li class="border border-t-0 border-x-0 border-gray-600 hover:border-gray-300 hover:text-white transition duration-500 ease-in-out pb-2">
+                    <a href="./about.html">About Me</a>
+                </li>
+                <li class="border border-t-0 border-x-0 border-gray-600 hover:border-gray-300 hover:text-white transition duration-500 ease-in-out pb-2">
+                    <a href="./contact.html">Contact Me</a>
+                </li>
+                <li class="border border-t-0 border-x-0 border-gray-600 hover:border-gray-300 hover:text-white transition duration-500 ease-in-out pb-2">
+                    <a href="./projects.html">Projects</a>
+                </li>
+                <li class="border border-t-0 border-x-0 border-gray-600 hover:border-gray-300 hover:text-white transition duration-500 ease-in-out pb-2">
+                    <a href="./mywork.html">Sample Project</a>
+                </li>
+                <li>
+                    <a href="./resume.html">Resume</a>
+                </li>
+            </ul>
+        </section>
+    </footer>
 </body>
 </html>
